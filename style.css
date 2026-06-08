@@ -1,0 +1,199 @@
+//Segue código CSS.
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7f5;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1b4332;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+header .logo span {
+    color: #52b788;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #52b788;
+}
+
+/* Seção Hero (Banner Principal) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1470&#39;) no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    background-color: #52b788;
+    color: #1b4332;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #40916c;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Seção Pilares */
+.pilares {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pilares h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1b4332;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-bottom: 5px solid #2d6a4f;
+    border-radius: 8px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #2d6a4f;
+    margin-bottom: 15px;
+}
+
+.saiba-mais {
+    display: block;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #0374ff;
+    font-weight: 600;
+}
+
+/* Painel de Informações Dinâmicas */
+.painel-info {
+    margin-top: 30px;
+    background-color: #e9f5ed;
+    padding: 20px;
+    border-left: 5px solid #52b788;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.escondido {
+    display: none;
+}
+
+/* Seção Sobre */
+.sobre {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.sobre-texto {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #ff0101f5;
+    color: #b7e4c7;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Responsividade simples para celulares */
+@media (max-width: 768px) {
+    header { flex-direction: column; gap: 15px; }
+    .hero h1 { font-size: 32px; }
+    .cards-container { flex-direction: column; align-items: center; }
+}
